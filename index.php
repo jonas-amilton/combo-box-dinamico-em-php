@@ -2,6 +2,13 @@
 // Inclui o arquivo de conexão com o banco de dados
 include('conexao.php');
 
+if(isset($_GET['cidade'])){
+
+echo 'Voce selecionou a cidade com ' . $_GET['cidade'];
+die("<a href=\"index.php\">Voltar ao inicio</a>");
+
+}
+
 // Consulta para obter todos os estados ordenados por nome
 $sql_code_states = "SELECT * FROM estados ORDER BY nome ASC";
 // Executa a consulta
